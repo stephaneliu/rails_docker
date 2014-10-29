@@ -1,7 +1,9 @@
 db:
-  image: postgres
+  image: mysql
+  environment:
+    MYSQL_ROOT_PASSWORD: password
   ports:
-    - "5432"
+    - "3306"
 
 web:
   build: .
