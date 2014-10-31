@@ -1,13 +1,15 @@
 db:
-  image: mysql
-  environment:
+  environment: &mysql_env
     MYSQL_ROOT_PASSWORD: password
+  image: mysql
   expose:
     - "3306"
   volumes_from:
     - data
 
 web:
+  environment:
+    <<: *mysql_env
   build: .
   volumes:
     - .:/usr/src/app
