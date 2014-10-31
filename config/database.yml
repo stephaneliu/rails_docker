@@ -15,14 +15,12 @@
 # gem 'pg'
 #
 development: &default
-  adapter: postgresql
-  encoding: unicode
-  database: myapp
+  adapter: mysql2
+  database: myapp_development
   pool: 5
-  username: postgres
-  password:
+  username: root
+  password: password
   host: db
-
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
