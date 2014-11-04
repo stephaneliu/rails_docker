@@ -10,7 +10,7 @@ db:
 web:
   environment:
     <<: *mysql_env
-  image: rails_docker:latest
+  image: rails_docker:v1
   command: rails server -e production
   ports:
     - "80:3000"
@@ -18,7 +18,7 @@ web:
     - db
 
 data:
-  image: production_data:latest
+  image: rails_docker_data:latest # https://github.com/docker/docker/issues/6999
   command: "true"
   volumes:
     - /var/lib/mysql
