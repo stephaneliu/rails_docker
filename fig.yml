@@ -23,9 +23,3 @@ data:
   command: "true"
   volumes:
     - /var/lib/mysql
-
-ide:
-  image: my_ide:v1
-  command: "true"
-  volumes:
-    - .:/usr/src/app
